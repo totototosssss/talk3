@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>誰の発言でしょう?? 🤔</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;500;700;800&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-wrapper">
+        <div class="app-container">
+            <header class="quiz-header">
+                <h1 class="game-title">
+                    誰の発言でしょう
+                    <span class="game-title-edition">??</span>
+                </h1>
+                <div class="header-info-bar">
+                    <div class="progress-info">
+                        <div id="progress-text" class="progress-text">問題 1 / 10</div>
+                        <div class="progress-bar-container">
+                            <div id="progress-bar" class="progress-bar"></div>
+                        </div>
+                    </div>
+                    <div class="current-score-display">
+                        <i class="fas fa-star score-icon"></i>score: <span id="current-score-value">0</span>
+                    </div>
+                </div>
+            </header>
+
+            <main id="quiz-area" class="quiz-content">
+                <div class="message-display-area">
+                    <div id="message-text" class="message-bubble">
+                        <i class="fas fa-comment-dots message-quote-icon"></i>
+                        <span id="message-text-content"></span>
+                    </div>
+                </div>
+                <div id="choices-area" class="choices-container">
+                </div>
+                <div class="feedback-action-area">
+                    <p id="feedback-text" class="feedback-text"></p>
+                    <button id="next-question-btn" class="action-button" style="display:none;">
+                        次の問題へ <i class="fas fa-arrow-right icon-after"></i>
+                    </button>
+                </div>
+            </main>
+
+            <section id="result-area" class="result-display-area" style="display:none;">
+                <div class="result-card">
+                    <h2 class="result-card-title">Quiz Result!</h2>
+                    <div id="result-icon-container" class="result-icon-container">
+                    </div>
+                    <p id="result-rank-title" class="result-rank-title"></p>
+                    <div class="final-score-display">
+                        <span class="final-score-label">FINAL SCORE</span>
+                        <span id="final-score-value" class="final-score-value">0</span>
+                        <span class="total-questions-label">/ <span id="total-questions-on-result">10</span></span>
+                    </div>
+                    <p id="result-message" class="result-message"></p>
+                    <button id="restart-btn" class="action-button restart-button">
+                        <i class="fas fa-redo icon-before"></i> もう一度挑戦！
+                    </button>
+                </div>
+            </section>
+
+            <footer class="app-footer">
+                <p>&copy; <span id="current-year"></span> Chat Room 子子と子  (3.27~5.24)</p>
+            </footer>
+        </div>
+    </div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
